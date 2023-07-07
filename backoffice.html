@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Back-office</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Back-office</a>
+    </nav>
+    <div class="container mt-4">
+      <form id="product-form">
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Descrizione:</label>
+          <textarea
+            class="form-control"
+            id="description"
+            name="description"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="price">Prezzo:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            name="price"
+            min="0"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="image_url">URL dell'immagine:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="image_url"
+            name="image_url"
+          />
+        </div>
+        <div class="form-group">
+          <label for="category">Categoria:</label>
+          <select class="form-control" id="category" name="category">
+            <option value="food">Cibo</option>
+            <option value="electronics">Elettronica</option>
+            <option value="clothing">Abbigliamento</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="brand">Marca:</label>
+          <input type="text" class="form-control" id="brand" name="brand" />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" id="submit-button">
+            Inserisci prodotto
+          </button>
+          <button type="button" class="btn btn-secondary" id="reset-button">
+            Reset
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary d-none"
+            id="update-button"
+          >
+            Aggiorna prodotto
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger d-none"
+            id="delete-button"
+          >
+            Elimina prodotto
+          </button>
+        </div>
+      </form>
+      <hr />
+      <h2>Prodotti</h2>
+      <ul class="list-group" id="products-list"></ul>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
