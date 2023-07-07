@@ -59,7 +59,3 @@ function renderProducts(listOfproducts) {
   });
 }
 
-window.onload = async () => {
-  const products = await getProducts();
-  renderProducts(products);
-};
